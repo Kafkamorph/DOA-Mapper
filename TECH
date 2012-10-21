@@ -1,0 +1,8 @@
+Starting requirements:
+=====================
+
+A Firefox with Firebug
+A Linux server with any HTTPD and php5, MySQL server.
+
+After the key is extracted (see above), you can play on Chrome instead of Firefox (recommended).
+

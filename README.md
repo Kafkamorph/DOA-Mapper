@@ -27,7 +27,7 @@ Again, no reply.
 This was too much, and I went to the forum. Trying for them to move their lazy ass and do something.
 They didn't. I started getting pissed.
 
-REMINDER: many people buy rubies who allows them to have a job. They are breaking the EULA, TOS and all Dev101 rules by not even trying to keep
+REMINDER: many people buy rubies who allows them (Kabam) to have a job. They are breaking the EULA, TOS and all Dev101 rules by not even trying to keep
 their users' data safe.
 
 I posted on the forums that this flaw existed.
