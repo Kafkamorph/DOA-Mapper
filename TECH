@@ -1,3 +1,10 @@
+Disclaimer: 
+==========
+
+I know that more than 90% of the players are too dumb to make this work. I won't shed a tear for you.
+Spend less time in WC and try to evolve instead.
+
+
 Starting requirements:
 =====================
 
@@ -30,7 +37,11 @@ They even tried to use an Amazon S3 header, but that's just 1 extra .php line to
 
 - Requests are made using CURL, JSON is returned and decoded into an array.
 
-- A 0.85 second pause is made (if there's no pause, you risk an 1 hour ban because their servers crap themselves) - Don't try 0.8, I already did. It's 0.85, no more, no less.
+- A 1 second pause is made (if there's no pause, you risk an 1 hour ban because their servers crap themselves) - Don't try 0.9, I already did. It's 1s, no more, no less.
+If you get blocked:
+- wait 1 hour and redo it. The sql queries use an INSERT REPLACE, so it's really no big load on the SQL server.
+OR
+- just go to kabam.com, signup a new char, change realm to the one you want (assuming it's not closed), and get the variables you need for the map to work.
 
 Let's get back to users and IDs:
 
@@ -39,4 +50,4 @@ Let's get back to users and IDs:
 - In this case, the script will then make another API call to get the name from the ID, and keep it in the NAMES table. So next time you encounter anything from this player, we already have the name.
 - If player level is < 2 or might < 200 the player is ignored. I used to have 50.000 of those, it's not worth it. Just players who logged in, saw Flash, ran away. They did well.
 
-The database will have to called "doa" (do it yourself, come on) and the tables are in the .sql schema included.
+The database will have to called "doa" (do it yourself, come on) and the tables are in the dump.sql schema included.

@@ -1,3 +1,5 @@
+Still not uploaded: map.php (the main file). I'll up it as soon as I end up preparing the gifts. :)
+
 DOA-Mapper
 ==========
 
@@ -9,10 +11,10 @@ Origin
 ======
 
 More than 2 months ago, I messaged support saying I had found a flaw that allowed a user to map the whole realm in 2 ways:
-- full map, square by square, with everything, including wildernesses
+- full map, square by square, with everything, including wildernesses (not included here, takes around 3 days to map)
 - by using a flaw both in their API and in their already obsolete Flash code, one could make an API call to "get" 16x16 squares of data - (user, might, alliance, and type of outpost)
 
-Kabam never replid to my offer. I say "offer" because, as an Application/Network Security Auditor, I charge for this. 
+Kabam never replied to my offer. I say "offer" because, as an Application/Network Security Auditor, I usually charge for this, obviously. 
 
 
 Release
@@ -53,6 +55,7 @@ Kabam went into a war they can't win.
 =================================================
 
 TECH file - geeky details for the full integration.
+
 GIFT file - full data on the Cantil realm as a proof of concept
 
 =================================================
@@ -62,4 +65,5 @@ I don't force you to use it, but feel free to fork it, modify it, and make sugge
 
 
 PS - If you're still an ass who buys rubies to have advantage, you can now understand how stupid you are. Advantages can come in many forms.
+
 PS@Kabam - You shouldn't have messed with me. I warned you 4 times.
