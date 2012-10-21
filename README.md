@@ -22,8 +22,8 @@ Why didn't I keep this to myself?
 
 For a long time, I did. Only the alliance I was in had access, and only certain members, not all.
 
-Recently, I had FOUR stuck marches and messaged support.
-Again, no reply.
+Recently, I had FOUR stuck marches and messaged support immediately, as this severely affects my gameplay.
+After almost a week, no reply.
 This was too much, and I went to the forum. Trying for them to move their lazy ass and do something.
 They didn't. I started getting pissed.
 
@@ -36,7 +36,7 @@ They banned me 4 times.
 I could have just made more accounts, but they were determined to ban me for a bunch of reasons who are pathetic:
 "encouraging users to break TOS" when, in fact, it's them who are not doing their job.
 
-So here is my gift. 
+So here is my gift to the community.
 I might map a couple of realms and post them free for all.
 But I surely won't map all (almost 400) realms, to here is the source. Fork it, and make those bastards pay for being rude and greedy.
 Or leave the game if you can't install this and feel you're ad a disadvantage. If you can't install it and your enemies can, you sure are.

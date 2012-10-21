@@ -1,0 +1,4 @@
+As of now, only 1:
+
+- if a player renames, the table NAMES will continue with his old name connected to his ID. I was just too lazy to do a prune maintenance .php just for that, but i might.
+

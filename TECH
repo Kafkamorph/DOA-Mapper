@@ -6,3 +6,9 @@ A Linux server with any HTTPD and php5, MySQL server.
 
 After the key is extracted (see above), you can play on Chrome instead of Firefox (recommended).
 
+- replace the realmxxx on the map.pyp file with your server's number.
+- input your mysql's credentials.
+- there are 2 tables used: one with the actual data, and another table that keeps the relation between a user's ID and his name. More on that below.
+- run the game normally, with Firebug installed and opened.
+- first of all, find your realm's number. You can do that by going to "change realm" and seeing the number of the server where you are.
+
