@@ -15,11 +15,47 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+--
+-- Table structure for table `cantil`
+--
+
+DROP TABLE IF EXISTS `cantil`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cantil` (
+  `x` int(3) NOT NULL,
+  `y` int(3) NOT NULL,
+  `alliance` varchar(66) NOT NULL,
+  `might` int(9) NOT NULL,
+  `level` int(9) NOT NULL,
+  `heal` varchar(66) NOT NULL,
+  `name` varchar(111) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(111) NOT NULL,
+  `map_player_id` varchar(55) NOT NULL,
+  `upt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pname` varchar(77) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `all` (`x`,`y`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `doa291res2`
+-- Table structure for table `cantilnomes`
 --
 
+DROP TABLE IF EXISTS `cantilnomes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `cantilnomes` (
+  `id` varchar(44) NOT NULL,
+  `name` varchar(222) DEFAULT NULL,
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+
+DROP TABLE IF EXISTS `doa291res2`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `doa291res2` (
@@ -37,18 +73,14 @@ CREATE TABLE `doa291res2` (
   `pname` varchar(77) NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `all` (`x`,`y`,`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=92599690 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `doa291res2backup`
---
-
 
 --
 -- Table structure for table `nomes`
 --
 
+DROP TABLE IF EXISTS `nomes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `nomes` (
@@ -67,4 +99,4 @@ CREATE TABLE `nomes` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-10-21  5:45:02
+-- Dump completed on 2012-10-21 16:10:40

@@ -14,10 +14,10 @@ After the key is extracted (see above), you can play on Chrome instead of Firefo
 
 - go to Map in the game, scroll a bit, then it's time to look at Firebug:
 Under the NET - HTML Console, find a POST kabam? and expand it. Select the "Response" tab.
-Look for these 3 values:
+Look for these 3 values and keep them:
 session_id, user_id and dragon_heart
 
-Look at their "value" and keep those. 
+- check the <form action> in the beginning of the Response and make sure that not only your realmxxx is correct, but also the cxx value. Edit map.php accordingly.
 
 - Edit map.php and edit all instances of these 3 variables in the code ($enc var) with the 3 values you got from Firebug.
 This is the section where the .php adds it all up, including the vulnerability which is on the Flash file (the words Kabam uses to encrypt all requests made to the server), SHA1s it, and BAM.

@@ -1,3 +1,4 @@
 As a gift, i'm including the latest realm (Cantil) data in .sql.
+Sicne the first run takes some time to extract the player names according to their ID, I already made that work for you.
 
 Import them to your sql them modify he map.php to update it.

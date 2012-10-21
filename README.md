@@ -45,4 +45,21 @@ Kabam might change the encryption code that is inside the Flash file, but that w
 
 After all, this was supposed to just be a Proof of Concept. But after they banned my first account for fake reasons, it became personal.
 
-In the TECH file I will give the more geeky details for the full integration.
+
+Kabam might "change something" to make this method non-working.
+And I will post updates so you can keep screwing them up.
+Kabam went into a war they can't win.
+
+=================================================
+
+TECH file - geeky details for the full integration.
+GIFT file - full data on the Cantil realm as a proof of concept
+
+=================================================
+
+This project's code and is released under the GPL as a game modifier using Kabam's lack of professionalism and coding abilities, leaving multiple ways to make a map of any server.
+I don't force you to use it, but feel free to fork it, modify it, and make suggestions.
+
+
+PS - If you're still an ass who buys rubies to have advantage, you can now understand how stupid you are. Advantages can come in many forms.
+PS@Kabam - You shouldn't have messed with me. I warned you 4 times.
