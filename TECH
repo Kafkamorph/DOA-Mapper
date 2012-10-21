@@ -2,13 +2,41 @@ Starting requirements:
 =====================
 
 A Firefox with Firebug
-A Linux server with any HTTPD and php5, MySQL server.
+A Linux server with any HTTPD and php5, MySQL server, php5-curl.
 
 After the key is extracted (see above), you can play on Chrome instead of Firefox (recommended).
 
-- replace the realmxxx on the map.pyp file with your server's number.
+- replace the realmxxx on the map.php file with your server's number.
 - input your mysql's credentials.
 - there are 2 tables used: one with the actual data, and another table that keeps the relation between a user's ID and his name. More on that below.
 - run the game normally, with Firebug installed and opened.
 - first of all, find your realm's number. You can do that by going to "change realm" and seeing the number of the server where you are.
 
+- go to Map in the game, scroll a bit, then it's time to look at Firebug:
+Under the NET - HTML Console, find a POST kabam? and expand it. Select the "Response" tab.
+Look for these 3 values:
+session_id, user_id and dragon_heart
+
+Look at their "value" and keep those. 
+
+- Edit map.php and edit all instances of these 3 variables in the code ($enc var) with the 3 values you got from Firebug.
+This is the section where the .php adds it all up, including the vulnerability which is on the Flash file (the words Kabam uses to encrypt all requests made to the server), SHA1s it, and BAM.
+The choice of words for the encryption of Kabam is curious, to say the least:
+
+"Draoumculiasis" , "LandCrocodile" , "Bevar-Asp"  - at least they could have used hexadecimal, would be more obfuscated in the Flash.
+
+
+They even tried to use an Amazon S3 header, but that's just 1 extra .php line to ruin their so-called "expertise".
+
+- Requests are made using CURL, JSON is returned and decoded into an array.
+
+- A 0.85 second pause is made (if there's no pause, you risk an 1 hour ban because their servers crap themselves) - Don't try 0.8, I already did. It's 0.85, no more, no less.
+
+Let's get back to users and IDs:
+
+- The user name is searched on the NAMES table. If it's there already, we get it, and proceed.
+- If it's NOT there, either we didn't get it (first run will take extra time because of this), or it's a new player.
+- In this case, the script will then make another API call to get the name from the ID, and keep it in the NAMES table. So next time you encounter anything from this player, we already have the name.
+- If player level is < 2 or might < 200 the player is ignored. I used to have 50.000 of those, it's not worth it. Just players who logged in, saw Flash, ran away. They did well.
+
+The database will have to called "doa" (do it yourself, come on) and the tables are in the 2 .sql schemas included.
