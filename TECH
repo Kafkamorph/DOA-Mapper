@@ -25,9 +25,12 @@ Look for these 3 values and keep them:
 session_id, user_id and dragon_heart
 
 - check the <form action> in the beginning of the Response and make sure that not only your realmxxx is correct, but also the cxx value. Edit map.php accordingly.
+For example: Mesite, realm 291, is on c13, Cantil (realm 313) is on c14.
 
 - Edit map.php and edit all instances of these 3 variables in the code ($enc var) with the 3 values you got from Firebug.
-This is the section where the .php adds it all up, including the vulnerability which is on the Flash file (the words Kabam uses to encrypt all requests made to the server), SHA1s it, and BAM.
+This is the section where the .php adds it all up, including the vulnerability which is on the Flash file (the words Kabam uses to encrypt all requests made to the server), SHA1s it, and ... done.
+We now have a string that can be used with the API, and it will verify as a correct client call.
+
 The choice of words for the encryption of Kabam is curious, to say the least:
 
 "Draoumculiasis" , "LandCrocodile" , "Bevar-Asp"  - at least they could have used hexadecimal, would be more obfuscated in the Flash.
@@ -38,16 +41,23 @@ They even tried to use an Amazon S3 header, but that's just 1 extra .php line to
 - Requests are made using CURL, JSON is returned and decoded into an array.
 
 - A 1 second pause is made (if there's no pause, you risk an 1 hour ban because their servers crap themselves) - Don't try 0.9, I already did. It's 1s, no more, no less.
+This may vary from server to server. It's your job to find out, I surely won't map 313 servers.
+
 If you get blocked:
-- wait 1 hour and redo it. The sql queries use an INSERT REPLACE, so it's really no big load on the SQL server.
+- wait 1 hour and redo it. The sql queries use an INSERT REPLACE, so it's really no big load on the SQL server. (here, you can see the last X coordinate you got before the block, and edit map.php to resume from that coord)
 OR
-- just go to kabam.com, signup a new char, change realm to the one you want (assuming it's not closed), and get the variables you need for the map to work.
+- just go to kabam.com, signup a new char, change realm to the one you want (assuming it's not closed), and get the variables you need for the map to work. Because ANY char will do.
 
 Let's get back to users and IDs:
 
-- The user name is searched on the NAMES table. If it's there already, we get it, and proceed.
+- We get a 16x16 square area using API call map.json, and convert it into a parseable array.
+- The user name is searched on the NAMES table ("nomes"). If it's there already, we get it with another API call (tile_at.json).
+This method can be used to get the full 750x750 map square by square, with the info on wilderness type and ownership. But because of Kabam's lame servers and blocking too many requests, it takes days.
+I will not post that code, but I have used it, and it's rewarding. Imagine raping someone's 32 wilds in 12 minutes. ;)
+
 - If it's NOT there, either we didn't get it (first run will take extra time because of this), or it's a new player.
 - In this case, the script will then make another API call to get the name from the ID, and keep it in the NAMES table. So next time you encounter anything from this player, we already have the name.
-- If player level is < 2 or might < 200 the player is ignored. I used to have 50.000 of those, it's not worth it. Just players who logged in, saw Flash, ran away. They did well.
+- If player level is < 2 or might < 200 the player is ignored. I used to have 50.000 of those inactives on just 1 realm, it's not worth it. Just players who logged in, saw Flash, ran away. They did well.
 
-The database will have to called "doa" (do it yourself, come on) and the tables are in the dump.sql schema included.
+The database will have to called "doa" (do it yourself, come on, if you don't know how to create a database in MySQL this doc isn't for you anyway) and the tables are in the dump.sql schema included.
+Don't forget to read GIFT for the freebies and demos of this Proof of Concept.
