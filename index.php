@@ -17,7 +17,7 @@
     <script type="text/javascript">
       function drawVisualization() {
 <?php
-mysql_connect("localhost","user","password");
+mysql_connect("localhost","root","remote");
 mysql_select_db("doa");
 mysql_query("SET NAMES 'UTF_8'");
 
@@ -27,6 +27,7 @@ var datax = google.visualization.arrayToDataTable([
         ['x', 'y','Alliance',	'name', 'might','type','lastGMT'],
 <?php
 $allx=0;
+#$a=mysql_query("select x,y,alliance,name,might,type from cantil where type!='City' order by might desc limit 3000	") or die(mysql_error());
 $a=mysql_query("select distinct x,y,alliance,name,might,type,upt as lastGMT from cantil  order by might desc limit 5000	") or die(mysql_error());
 $total=mysql_num_rows($a);
 while($r=mysql_fetch_row($a))
@@ -246,7 +247,7 @@ echo "Total in database: $cc[0]";
           <td style='width: 200px'>
 
 <font color=#ff0000 size=4>
- NOTES: Proof of concept - mapping of Cantil realm of DOA -  <a href="https://github.com/Kafkamorph/DOA-Mapper">Source here</a>
+ NOTES: Proof of concept - mapping of Cantil realm of DOA -  <a href="https://github.com/Kafkamorph/DOA-Mapper">Source here to map other realms</a>
 <br> <br></font>- There could be value discrepancies between a player's ownerships - which means player's power changed while the script was running.
 <br> <br>-  Min value for slider is now 100k, if you want to see even weaker players, or a certain value, move the sliders.
 <br><br> - After I contacted KABAM support about a vulnerability, they decided not to fix it, and banned 4 of my 120+ forum accounts (big deal) when I asked for a char with 4 stuck marches to be fixed.
