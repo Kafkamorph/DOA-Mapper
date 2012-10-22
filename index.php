@@ -1,6 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+
+<style type='text/css' >
+</style>
+
+
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>
       DOA
@@ -19,11 +24,10 @@ mysql_query("SET NAMES 'UTF_8'");
 ?>
 
 var datax = google.visualization.arrayToDataTable([
-        ['x', 'y','Alliance',	'name', 'might','type','last'],
+        ['x', 'y','Alliance',	'name', 'might','type','lastGMT'],
 <?php
 $allx=0;
-#$a=mysql_query("select x,y,alliance,name,might,type from doa291res where type!='City' order by might desc limit 3000	") or die(mysql_error());
-$a=mysql_query("select distinct x,y,alliance,name,might,type,upt as last from doa291res2  order by might desc limit 3000	") or die(mysql_error());
+$a=mysql_query("select distinct x,y,alliance,name,might,type,upt as lastGMT from cantil  order by might desc limit 5000	") or die(mysql_error());
 $total=mysql_num_rows($a);
 while($r=mysql_fetch_row($a))
 {
@@ -40,8 +44,8 @@ if($allx<$total) echo ",\n\r";
 var dataxx = google.visualization.arrayToDataTable([
         ['x', 'y','Alliance',	'name', 'might','type','last'],
 <?php
-#$xa=mysql_query("select x,y,alliance,name,might,type,upt from doa291res2  order by might desc limit 5000	") or die(mysql_error());
-$xa=mysql_query("select distinct x,y,alliance, name,might,type,upt from doa291res2  group by name order by might	 desc limit 1000	") or die(mysql_error());
+#$xa=mysql_query("select x,y,alliance,name,might,type,upt from cantil  order by might desc limit 5000	") or die(mysql_error());
+$xa=mysql_query("select distinct x,y,alliance, name,might,type,upt from cantil  group by name order by might	 desc limit 1000	") or die(mysql_error());
 
 $totalx=mysql_num_rows($xa);
 while($r=mysql_fetch_row($xa))
@@ -103,9 +107,10 @@ var cities = new google.visualization.ControlWrapper({
           'options': {
             'filterColumnLabel': 'might',
           'ui': {'labelStacking': 'vertical',
+
           label: 'Might', labelSeparator: ':'         }
           }
-           ,'state': {'lowValue': 1000000}
+           ,'state': {'lowValue': 100000}
         });
       
         var categoryPicker = new google.visualization.ControlWrapper({
@@ -123,11 +128,13 @@ var cities = new google.visualization.ControlWrapper({
         });
       
   
+                                   
         var table = new google.visualization.ChartWrapper({
           'chartType': 'Table',
           'containerId': 'chart2',
           'options': {
           'allowHtml': true,
+
           'sortColumn': 4,
           'pageSize': 5,
           'sortAscending': false,
@@ -142,7 +149,7 @@ var cities = new google.visualization.ControlWrapper({
 
 
 hAxis: {title: 'X', minValue: 0, maxValue: 749, viewWindowMode: 'pretty'},
-colors:['green', 'orange'],
+colors:['green', 'red'],
           vAxis: {title: 'Y', minValue: 0, maxValue: 749, direction: 1},
             'width': 420,
             'height': 450,
@@ -166,7 +173,7 @@ hAxis: {
 viewWindow: {min:0, max:751} ,
 
 title: 'X', minValue: 0, maxValue: 751, viewWindowMode: 'explicit'},
-colors:['blue', 'orange'],
+colors:['blue', 'red'],
           vAxis: {viewWindow: {min:0, max:751} ,
           
           title: 'Y', minValue: 0, maxValue: 751, direction: -1},
@@ -211,13 +218,13 @@ colors:['blue', 'orange'],
       google.setOnLoadCallback(drawVisualization);
     </script>
   </head>
-  <body style="font-family: Arial;border: 0 none;">
+  <body style="font-family: Arial;border: 0 none;" bgcolor="#dddddd">
 
 <?php
-$c=mysql_query("select count(x) from doa291res2");
+$c=mysql_query("select count(x) from cantil");
 $cc=mysql_fetch_row($c);
-echo "<br><font size='5'> V0.5 - cities + outposts<br></b></font>";
-echo "Mapping thy arse in 2012 - total in database: $cc[0]";
+echo "<br><font size='5'> Kabam DOA Mapper V0.5 - Cantil Realm cities + outposts<br></b></font>";
+echo "Total in database: $cc[0]";
 #echo last
 #<form name="myLetters" action="index.php" method="GET">
 #<input type="text" name="x" size=3 id="x" value="" /> X
@@ -231,20 +238,24 @@ echo "Mapping thy arse in 2012 - total in database: $cc[0]";
         <tr style='vertical-align: top'>
           <td style='width: 200px; font-size: 0.9em;'>
             <div id="strname_div"></div><br>
-            <div id="control1"></div><br>
-            <div id="control2"></div><br>
-            <div id="control3"></div><br>
-                <div id="control3x"></div>
+            <div id="control1"  ></div><br>
+            <div id="control2"  ></div><br>
+            <div id="control3"  ></div><br>
+                <div id="control3x" ></div>
           </td>
           <td style='width: 200px'>
-TOP Might ONLY 
+
 <font color=#ff0000 size=4>
-<br>
- notes: everything is re-updated continuously with new data and old values removed<br>
-  min value for slider is now 1M, if you want to see even weaker players, move the slider
+ NOTES: Proof of concept - mapping of Cantil realm of DOA -  <a href="https://github.com/Kafkamorph/DOA-Mapper">Source here</a>
+<br> <br></font>- There could be value discrepancies between a player's ownerships - which means player's power changed while the script was running.
+<br> <br>-  Min value for slider is now 100k, if you want to see even weaker players, or a certain value, move the sliders.
+<br><br> - After I contacted KABAM support about a vulnerability, they decided not to fix it, and banned 4 of my 120+ forum accounts (big deal) when I asked for a char with 4 stuck marches to be fixed.
+The thing is, I tried to offer my help. They don't want it, and were rude in the process. 
+<br>So, source is public now. Game over. Go to the source site to read more, get info, and DIY.
+<br><br>
  </font>
-           <div style="float: left;" id="chart2"></div>
-            <div style="float: left;" id="chart3"></div>
+           <div style="float: left; " id="chart2"></div>
+            <div style="float: left; background-color: #0900C4;" id="chart3"></div>
           </td>
         </tr>
       </table>
