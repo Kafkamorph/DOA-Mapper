@@ -13,7 +13,7 @@ Paying customers should think about if they want to keep spending money on a fla
 - I OFFERED to help them protect it. Got no answer.
 - 2 days ago, they started banning (4 out of my 100+) forum accounts with no valid reasons, after I complained about having 4 marches stuck, and exposing their flaws.
 
-So, 2 months after my warning, I am not making the DOA Mapper public. Anyone is free to fork it, modify it, upgrade it.
+So, 2 months after my warning, I am now making the DOA Mapper public. Anyone is free to fork it, modify it, upgrade it.
 
 Kabam, it was easier for you to fix 4 stuck marches than have this public. Now you don't have a say anymore. 
 I'll take it from here.
