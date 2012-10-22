@@ -1,4 +1,24 @@
-Still not uploaded: map.php (the main file). I'll up it as soon as I end up preparing the gifts. :)
+READ FIRST (summary):
+
+This is NOT a "hack". It's a vulnerability that Kabam decided not to fix. (as well as all the multiple problems they ignore)
+
+The game has an eternal flaw: the Flash file contains the credentials used to encrypt the data sent to the server (encryption should be bidirectional, as any noob knows),
+so even if they change it, the problem lies in the CORE of their bad programming.
+Even the cookie has essential data that should be hidden. This totals an amount of flaws that will not be fixed easily.
+
+Paying customers should think about if they want to keep spending money on a flawed game, and a very unprofessional dev team.
+
+- Kabam was contacted 2 months ago where I explicitely warned them about this, and got no answer.
+- This is a flaw in the client-server communication. A severe one, that any programmer can either fix, or use.
+- I OFFERED to help them protect it. Got no answer.
+- 2 days ago, they started banning (4 out of my 100+) forum accounts with no valid reasons, after I complained about having 4 marches stuck, and exposing their flaws.
+
+So, 2 months after my warning, I am not making the DOA Mapper public. Anyone is free to fork it, modify it, upgrade it.
+
+Kabam, it was easier for you to fix 4 stuck marches than have this public. Now you don't have a say anymore. 
+I'll take it from here.
+
+
 
 DOA-Mapper
 ==========
