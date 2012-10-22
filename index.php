@@ -28,6 +28,7 @@ $total=mysql_num_rows($a);
 while($r=mysql_fetch_row($a))
 {
 $allx++;
+$r[3]=trim($r[3]);
 if(substr($r[5],0,4)== "City") $r[5]="<b>$r[5]<b>";
 
 echo "[$r[0],$r[1],'$r[2]','$r[3]',$r[4],'$r[5]','$r[6]'  ]";
@@ -46,6 +47,7 @@ $totalx=mysql_num_rows($xa);
 while($r=mysql_fetch_row($xa))
 {
 $allxx++;
+$r[3]=trim($r[3]);
 #echo "[$r[0],$r[1],'$r[2]','$r[3]',$r[4],'$r[5]','$r[6]']";
 #if($allxx<$totalx) echo ",\n\r";
 }

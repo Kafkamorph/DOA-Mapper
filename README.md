@@ -18,6 +18,12 @@ So, 2 months after my warning, I am now making the DOA Mapper public. Anyone is 
 Kabam, it was easier for you to fix 4 stuck marches than have this public. Now you don't have a say anymore. 
 I'll take it from here.
 
+DEMO
+====
+
+To show immediately to everyone how does the script behave after the mapping is done, I prepared a Cantil realm full mappig for your enjoyment:
+
+http://map.m3ta.info - there it is, the whole Cantil realm and all it's glory (and flaws).
 
 
 DOA-Mapper
