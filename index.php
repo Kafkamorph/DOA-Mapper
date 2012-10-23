@@ -252,7 +252,7 @@ echo "Total in database: $cc[0] cities and outposts";
 <br> <br>-  Min value for slider is now 100k, if you want to see even weaker players, or a certain value, move the sliders.
 <br><br> - After I contacted KABAM support about a vulnerability, they decided not to fix it, and banned 4 of my 120+ forum accounts (big deal) when I asked for a char with 4 stuck marches to be fixed.
 The thing is, I tried to offer my help. They don't want it, and were rude in the process. 
-<br>So, source is public now. Game over. Go to the source site to read more, get info, and DIY.
+<br>So, source is public now. Game over. Go to the source site to read the full story, get info, and DIY instructions.
 <br><br>
  </font>
            <div style="float: left; " id="chart2"></div>
