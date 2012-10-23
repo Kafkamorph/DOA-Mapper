@@ -1,7 +1,8 @@
-As a gift, i'm including the latest realm (Cantil) data in .sql - cantil.sql and cantilnomes.sql 
+As a gift, i'm including the latest realm (Cantil) data in cantil.sql - has both the realm data, and player names-IDs tables.
 
 Since the first run takes some time to extract the player names according to their ID, I already made all that work for you.
 Import them to your sql database named 'doa' then run the map.php to update it.  (after following everything in the TECH file)
+This map.php is configured for Cantil realm. If you want another realm, read the TECH file carefully to adapt it to your needs.
 
 Edit your Crontab to run it every 6 hours or so.
 
