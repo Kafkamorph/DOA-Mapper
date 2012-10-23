@@ -225,7 +225,7 @@ colors:['blue', 'red'],
 $c=mysql_query("select count(x) from cantil");
 $cc=mysql_fetch_row($c);
 echo "<br><font size='5'> Kabam DOA Mapper V0.5 - Cantil Realm cities + outposts<br></b></font>";
-echo "Total in database: $cc[0]";
+echo "Total in database: $cc[0] cities and outposts";
 #echo last
 #<form name="myLetters" action="index.php" method="GET">
 #<input type="text" name="x" size=3 id="x" value="" /> X
@@ -247,7 +247,7 @@ echo "Total in database: $cc[0]";
           <td style='width: 200px'>
 
 <font color=#ff0000 size=4>
- NOTES: Proof of concept - mapping of Cantil realm of DOA -  <a href="https://github.com/Kafkamorph/DOA-Mapper">Source here to map other realms</a>
+ NOTES: Proof of concept - mapping of Cantil realm of DOA -  <a href="https://github.com/Kafkamorph/DOA-Mapper">Click here to see Source and to map other realms</a>
 <br> <br></font>- There could be value discrepancies between a player's ownerships - which means player's power changed while the script was running.
 <br> <br>-  Min value for slider is now 100k, if you want to see even weaker players, or a certain value, move the sliders.
 <br><br> - After I contacted KABAM support about a vulnerability, they decided not to fix it, and banned 4 of my 120+ forum accounts (big deal) when I asked for a char with 4 stuck marches to be fixed.

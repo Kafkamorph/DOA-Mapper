@@ -1,9 +1,10 @@
-As a gift, i'm including the latest realm (Cantil) data in .sql.
-Since the first run takes some time to extract the player names according to their ID, I already made all that work for you.
-Import them to your sql them run the map.php to update it.  (after following everything in the TECH file)
+As a gift, i'm including the latest realm (Cantil) data in .sql - cantil.sql and cantilnomes.sql 
 
-Edit your Crontab to tun it every 6 hours or so.
+Since the first run takes some time to extract the player names according to their ID, I already made all that work for you.
+Import them to your sql database named 'doa' then run the map.php to update it.  (after following everything in the TECH file)
+
+Edit your Crontab to run it every 6 hours or so.
 
 OR
 
-Just go to http://map.m3ta.info - that's a second gift. A full mapping of Cantil realm.
+Just go to http://doamapper.m3ta.info - that's a second gift. A full mapping of Cantil realm.
