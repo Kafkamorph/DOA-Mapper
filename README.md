@@ -25,7 +25,7 @@ DEMO
 
 To show immediately to everyone how does the script behave after the mapping is done, I prepared a Cantil realm full mappig for your enjoyment:
 
-http://map.m3ta.info - there it is, the whole Cantil realm in all its glory (and flaws).
+http://doamapper.m3ta.info - there it is, the whole Cantil realm in all its glory (and flaws).
 
 
 DOA-Mapper
