@@ -21,7 +21,7 @@ I'll take it from here.
 DEMO
 ====
 
-To show immediately to everyone how does the script behave after the mapping is done, I prepared a Cantil realm full mappig for your enjoyment:
+To show immediately to everyone how does the script behave after the mapping is done, I prepared a Cantil realm full mapping for your enjoyment:
 
 *removed* - Cantil players are now sending me rubies to access it, so it's not 100% free anymore. :P
 
