@@ -1,5 +1,3 @@
-http://doamapper.m3ta.info
-
 READ FIRST (summary):
 
 This is NOT a "hack". It's a vulnerability that Kabam decided not to fix. (as well as all the multiple problems they ignore)
@@ -25,7 +23,7 @@ DEMO
 
 To show immediately to everyone how does the script behave after the mapping is done, I prepared a Cantil realm full mappig for your enjoyment:
 
-http://doamapper.m3ta.info - there it is, the whole Cantil realm in all its glory (and flaws).
+*removed* - Cantil players are now sending me rubies to access it, so it's not 100% free anymore. :P
 
 
 DOA-Mapper
